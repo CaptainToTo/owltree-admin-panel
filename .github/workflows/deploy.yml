@@ -8,6 +8,11 @@ on:
     branches:
       - main  # Optionally deploy on pull request to main branch
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,5 +48,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Deploy to gh-pages branch
-          folder: dist/server-browser  # The directory containing the build files
+          folder: dist/server-browser/browser  # The directory containing the build files
           token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token to authenticate with GitHub API
