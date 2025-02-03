@@ -27,6 +27,11 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+    
+      # Install Angular CLI globally
+      - name: Install Angular CLI
+        run: |
+          npm install -g @angular/cli
 
       # Build the Angular app
       - name: Build Angular app
