@@ -1,0 +1,8 @@
+<section class="session-block">
+    <h3>Session {{ sessionId() }}:</h3>
+    <h3>{{ appId() }}</h3>
+    <p>Addr: {{ ipAddr() }}</p>
+    <p>TCP: {{ tcpPort() }} | UDP: {{ udpPort() }}</p>
+    <p>{{ clientCount() }}/{{ maxClients() }} client(s) | {{ authority() === 0 ? "server authority" : ("client " + authority() + " host") }}</p>
+    <a [routerLink]="['/details', sessionId()]">see details ></a>
+</section>

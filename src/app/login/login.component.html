@@ -1,0 +1,36 @@
+<div class="login-container">
+    <h2>Admin Login</h2>
+    
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <div class="form-group">
+        <label for="server">Server</label>
+        <input
+            type="text"
+            id="server"
+            class="form-control"
+            formControlName="server"
+            placeholder="Enter server endpoint"
+            required
+        />
+        <div *ngIf="loginForm.get('server')?.touched && loginForm.get('server')?.invalid" class="error-message">
+            Server endpoint is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter admin password"
+            required
+        />
+        <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-message">
+            Password is required.
+        </div>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

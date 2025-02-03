@@ -1,0 +1,183 @@
+{
+    "sessions": [
+        {
+            "sessionId": 1,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8000,
+            "udpPort": 9000,
+            "appId": "MyAppId",
+            "clientCount": 5,
+            "maxClients": 10,
+            "authority": 1
+        },
+        {
+            "sessionId": 2,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8010,
+            "udpPort": 9010,
+            "appId": "MyAppId",
+            "clientCount": 6,
+            "maxClients": 10,
+            "authority": 0
+        },
+        {
+            "sessionId": 3,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8020,
+            "udpPort": 9020,
+            "appId": "FarmingWithFriends",
+            "clientCount": 2,
+            "maxClients": 10,
+            "authority": 1
+        },
+        {
+            "sessionId": 4,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8030,
+            "udpPort": 9030,
+            "appId": "FarmingWithFriends",
+            "clientCount": 4,
+            "maxClients": 10,
+            "authority": 1
+        },
+        {
+            "sessionId": 5,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8030,
+            "udpPort": 9030,
+            "appId": "FarmingWithFriends",
+            "clientCount": 4,
+            "maxClients": 10,
+            "authority": 1
+        },
+        {
+            "sessionId": 6,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8030,
+            "udpPort": 9030,
+            "appId": "FarmingWithFriends",
+            "clientCount": 4,
+            "maxClients": 10,
+            "authority": 1
+        },
+        {
+            "sessionId": 7,
+            "ipAddr": "127.0.0.1",
+            "tcpPort": 8030,
+            "udpPort": 9030,
+            "appId": "FarmingWithFriends",
+            "clientCount": 4,
+            "maxClients": 10,
+            "authority": 1
+        }
+    ],
+    "1": {
+        "sessionId": 1,
+        "ipAddr": "127.0.0.1",
+        "tcpPort": 8000,
+        "udpPort": 9000,
+        "appId": "MyAppId",
+        "maxClients": 10,
+        "authority": 1,
+        "clients": [
+            {
+                "clientId": 1,
+                "ping": 100
+            },
+            {
+                "clientId": 2,
+                "ping": 45
+            },
+            {
+                "clientId": 3,
+                "ping": 20
+            },
+            {
+                "clientId": 5,
+                "ping": 130
+            },
+            {
+                "clientId": 6,
+                "ping": 95
+            }
+        ],
+        "clientEvents": [
+            {
+                "eventType": 0,
+                "clientId": 1,
+                "timestamp": 0
+            },
+            {
+                "eventType": 0,
+                "clientId": 2,
+                "timestamp": 3
+            },
+            {
+                "eventType": 0,
+                "clientId": 3,
+                "timestamp": 4
+            },
+            {
+                "eventType": 0,
+                "clientId": 4,
+                "timestamp": 5
+            },
+            {
+                "eventType": 0,
+                "clientId": 5,
+                "timestamp": 7
+            },
+            {
+                "eventType": 1,
+                "clientId": 4,
+                "timestamp": 10
+            },
+            {
+                "eventType": 0,
+                "clientId": 6,
+                "timestamp": 15
+            }
+        ],
+        "logs": "test\ntest\ntest",
+        "bandwidth": {
+            "recv": [
+                1000,
+                500,
+                2000,
+                2000,
+                1500,
+                1750,
+                2000,
+                600,
+                1200,
+                500,
+                2000,
+                2000,
+                1500,
+                1750,
+                2000,
+                600,
+                1200,
+                500,
+                2000,
+                2000,
+                1500,
+                1750,
+                2000,
+                600,
+                1200
+            ],
+            "send": [
+                1000,
+                500,
+                2000,
+                2000,
+                1500,
+                1750,
+                2000,
+                600,
+                1200
+            ]
+        }
+    }
+}

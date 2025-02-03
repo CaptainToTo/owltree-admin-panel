@@ -1,0 +1,41 @@
+<section>
+    <a routerLink="/sessions">< back to session list</a>
+    <hr>
+    <h2>Session {{sessionId}}: {{details.appId}}</h2>
+    <h3>Server: {{details.ipAddr}} (TCP: {{details.tcpPort}}, UDP: {{details.udpPort}})</h3>
+    <hr>
+    <h3>Clients {{details.clients.length}}/{{details.maxClients}}</h3>
+    <div class="client-list">
+        <ul>
+            <li *ngFor="let client of details.clients">client {{client.clientId}}: {{client.ping}} ms {{getAuthorityStr(client.clientId)}}</li>
+        </ul>
+    </div>
+    <br>
+    <highcharts-chart
+    *ngIf="clientChartOptions"
+    [Highcharts]="highcharts"
+    [options]="clientChartOptions">
+
+    </highcharts-chart>
+    <hr>
+    <h3>Bandwidth</h3>
+    <br>
+    <p>Total Received: {{totalRecv()}} KB</p>
+    <highcharts-chart
+    *ngIf="recvChartOptions"
+    [Highcharts]="highcharts"
+    [options]="recvChartOptions">
+
+    </highcharts-chart>
+    <br>
+    <p>Total Sent: {{totalSend()}} KB</p>
+    <highcharts-chart
+    *ngIf="sendChartOptions"
+    [Highcharts]="highcharts"
+    [options]="sendChartOptions">
+
+    </highcharts-chart>
+    <hr>
+    <h3>Logs</h3>
+    <p>{{details.logs}}</p>
+</section>
